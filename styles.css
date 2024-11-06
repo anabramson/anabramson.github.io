@@ -1,0 +1,891 @@
+/* Reset and Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    font-size: clamp(12px, 2vw + 1rem, 18px);
+}
+html, body {
+    margin: 0;
+    padding-left: 6rem; 
+    font-family: 'Noto Sans', sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+footer {
+    padding-top: 3rem;
+    font-family: 'Noto Sans', sans-serif;
+    font-size: 0.60rem;
+    text-align: center;
+}
+/* Main Content Container */
+.main-container {
+    max-width: 1200px;
+    margin: 4rem auto;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+/* Headings and Text */
+h1, h2, h3 {
+    color: #222;
+    margin-bottom: 0.5rem;
+    font-weight: normal;
+    letter-spacing: 0.5px;
+}
+
+/* Header Section */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: left;
+    width: 100%;
+    padding-top: 0.5rem;
+    padding-bottom: 1rem;
+    flex-direction: row;
+}
+
+/* Title Section */
+.name-section {
+    max-width: 800px;
+    width: 100%;
+    margin-top: 0.25rem;
+    padding: 0;
+}
+
+/* Name Link */
+.name-link {
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Highlighted Heading for Name */
+.name-section h1 {
+    font-size: 2.5rem;
+    color: white;
+    background-color: #1a1a1a;
+    padding: 0.25rem 0.25rem;
+    margin-bottom: 0.5rem;
+    display: inline-block;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Subtitle */
+.name-section h2 {
+    font-size: 1.5rem;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+/* Expertise Section */
+.expertise-section {
+    max-width: 800px;
+    width: 100%;
+    margin: 1.0rem 0 0;
+}
+
+/* Highlighted Heading in Expertise Section */
+.expertise-section h2 {
+    font-size: 1.1rem;
+    color: white;
+    background-color: grey;
+    padding: 0.5rem 1rem;
+    display: inline-block;
+    margin-top: 3rem;
+}
+
+/* Right-Aligned Navigation */
+.main-nav {
+    position: absolute;
+    display: flex;
+    gap: 20px; /* Consistent spacing between links */
+    flex-shrink: 0; /* Prevents the nav from shrinking on smaller screens */
+    top: 2.5rem;
+    right: 11rem;
+}
+
+/* Navigation Links */
+.main-nav a {
+    color: #797979;
+    text-decoration: none;
+    font-size: 0.85rem; /* Default font size for links */
+    transition: color 0.3s, font-weight 0.3s;
+    text-align: center;
+}
+
+.main-nav a:hover {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.main-nav a.active {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+/* Social Icon Styling */
+.social-links a img {
+    width: 32px;
+    height: 32px;
+    filter: grayscale(100%);
+    transition: filter 0.3s ease, transform 0.3s;
+}
+
+.social-links a:hover img {
+    filter: grayscale(0%);
+    transform: scale(1.1); /* Optional: small scale on hover */
+}
+
+/* Tooltip for Social Icons */
+.tooltip {
+    visibility: hidden;
+    opacity: 0;
+    position: absolute;
+    background-color: #333;
+    color: #fff;
+    padding: 0.5rem;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 0.75rem;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 10;
+    transform: translate(-50%, 50%);
+    left: 50%;
+    top: 100%;
+    margin-top: 8px;
+}
+
+.social-links a:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Project Gallery Layout */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    padding: 0rem;
+}
+
+.project-item {
+    text-align: left;
+    padding: 1rem;
+}
+
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-item img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-item h3 {
+    font-size: 1.2rem;
+    margin-top: 1rem;
+    color: #333;
+}
+
+.project-item p {
+    font-size: 1rem;
+    color: #666;
+}
+
+/* Formatting for writing container */
+.writings-container, .talks-container, .talk-year h2 {
+    font-size: 0.9rem;
+    display: inline-block;
+    color: #7a7a7a;
+}
+
+.writings-container {
+
+    margin-top: 2rem;
+}
+
+.writing-title {
+ color: #121111;
+}
+
+.writing-publink a, .talk-publink a {
+    color: rgb(235, 20, 20);
+    text-decoration: none;
+}
+
+.writing-publink a:hover, .talk-publink a:hover{
+    color: rgb(25, 14, 238);
+    text-decoration: underline;
+}
+
+/* Formatting for the talks page */
+.talk-year h2 {
+    font-size: 1.0rem;
+    display: inline-block;
+    color: #131313;
+    font-weight: bold;
+    padding-top: 1.0em;
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+}
+
+.talk-item {
+    padding-top: 0.5 em;
+}
+
+.talk-title {
+    font-size: 1.0em;
+    font-weight: 500;
+    color: #222;
+}
+
+.talk-event, .talk-description {
+    font-size: 0.85em;
+    color: #666;
+    margin: 0.3em 0;
+}
+.year-separator {
+    border: none;
+    border-top: 2px solid #ccc; /* Defines the thickness and color of the line */
+    margin: 2em 0; /* Adds space around the line */
+    width: 100%;
+}
+
+/* Formatting for the about page */
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 50px;
+    max-width: 1200px;
+    margin-right: auto;
+    margin-left: 0rem;
+}
+
+/* Left column */
+.about-left-column {
+    flex: 1;
+    max-width: 300px;
+    margin-right: 40px;
+    margin-left: 0rem;
+}
+
+.about-profile-image {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.about-contact-info, .about-work-study {
+    font-size: 0.80rem;
+    display: inline-block;
+    color: #7a7a7a;
+}
+
+.about-contact-info p, .about-work-study p {
+    padding-bottom: 1rem;
+}
+
+.about-contact-info h2, .about-work-study h2 {
+    font-size: 0.80rem;
+    display: inline-block;
+    color: #7a7a7a;
+    padding-bottom: 0rem;
+    padding-top: 3rem;
+}
+
+/* Right column */
+.about-right-column {
+    flex: 2;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.about-bio-summary h1 {
+    font-size: 1.0em;
+    margin-bottom: 20px;
+}
+
+.about-bio-summary p {
+    margin-bottom: 20px;
+    font-family: 'Noto Sans', sans-serif;
+    color: #121212;
+    font-size: .85em;
+
+}
+
+.about-related-websites, .about-sample-press, .about-sample-awards {
+    margin-top: 30px;
+}
+
+.about-related-websites h2, .about-sample-press h2, .about-sample-awards h2 {
+    font-size: 0.8em;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.about-related-websites ul, .about-sample-press ul, .about-sample-awards ul {
+    list-style: disc;
+    margin-left: 20px;
+    font-size: 0.8em;
+}
+
+.about-related-websites li, .about-sample-press li, .about-sample-awards li {
+    margin-bottom: 5px;
+}
+
+.about-related-websites a, .about-sample-press a, .about-sample-awards a {
+    color: rgb(235, 20, 20);
+    text-decoration: none;
+}
+
+.about-related-websites a:hover, .about-sample-press a:hover, .about-sample-awards a:hover{
+    color: rgb(25, 14, 238);
+    text-decoration: underline;
+}
+
+/* Styles for the reading list page and title */
+.reading-list-container {
+    padding: 0px;
+    max-width: 1200px;
+    margin: 0rem;
+}
+
+h1 {
+    text-align: Left;
+    font-size: 1rem;
+    margin-bottom: 20px;
+}
+
+/* Updated Carousel Styles */
+.carousel-wrapper {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow: hidden; /* This is crucial for preventing peek-through */
+    padding: 0 3rem;
+}
+
+.book-carousel {
+    display: flex;
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    position: relative; /* Added for better containment */
+    touch-action: pan-y pinch-zoom;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.book-pair {
+    display: flex;
+    width: 100%; /* Changed from min-width to width */
+    flex: 0 0 100%; /* Added to prevent shrinking/growing */
+    gap: 2rem;
+    padding: 1rem;
+    justify-content: center;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+
+.book-item {
+    flex: 0 0 calc(50% - 1rem);
+    max-width: 400px;
+    min-width: 250px;
+    margin: 0 auto;
+    box-sizing: border-box; /* Ensure padding is included in width calculation */
+}
+.book-item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 8px;
+    pointer-events: none;
+}
+
+.book-info {
+    padding: 1rem 0;
+    pointer-events: none;
+}
+
+/* Button Styles */
+.carousel-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #1a1a1a;
+    color: white;
+    border: none;
+    padding: 0.8rem;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn:hover {
+    background: #333;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.left-btn {
+    left: 0;
+}
+
+.right-btn {
+    right: 0;
+}
+
+/* Pagination Dots */
+.pagination-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #ccc;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active {
+    background: #1a1a1a;
+    transform: scale(1.2);
+}
+
+/* Responsive Adjustments for Tablet and Smaller Screens */
+@media (max-width: 768px) {
+
+    body, .main-container, .main-header, .social-links, .main-nav {
+        margin: 0;
+        padding: 0;
+    }
+    .main-header {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+
+    .social-links {
+        margin-bottom: 1rem; /* Adjust spacing for tablets */
+    }
+
+    .social-links a img {
+        width: 28px;
+        height: 28px; /* Slightly smaller icons on tablets */
+    }
+
+    .main-nav a {
+        font-size: 0.70rem; /* Smaller font for navigation links */
+    }
+
+    .main-nav {
+        position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        transition: top 0.3s ease;
+        
+    }
+
+    .name-section h1 {
+        font-size: 1.8rem; /* Smaller font for tablet screens */
+    }
+
+    .name-section h2 {
+        font-size: 1.2rem;
+    }
+
+    .expertise-section h2 {
+        font-size: 1.5rem;
+    }
+
+    /* Expertise Section */
+.expertise-section 
+{
+    max-width: 800px;
+    width: 100%;
+    margin: 0;
+}
+
+/* Highlighted Heading in Expertise Section */
+.expertise-section h2 {
+    font-size: 1.0rem;
+    color: white;
+    background-color: grey;
+    padding: 0.5rem 0.5rem;
+    display: inline-block;
+    margin-top: 2rem;
+}
+.expertise-section p {
+    
+    font-size: 0.8rem;
+}
+
+    .project-item h3 
+    {
+        font-size: 0.80rem;
+    }
+
+    .project-item p 
+    {
+        font-size: 0.9rem;
+    }
+   /* Formatting for writing container */
+   .writings-container , .talks-container {
+    font-size: 0.7rem;
+    display: inline-block;
+    color: #7a7a7a;
+}
+
+    .talks-grid {
+        grid-template-columns: 1fr;
+    }
+
+/*Formatting for the About page*/
+.about-container {
+    flex-direction: column;
+}
+
+.about-left-column {
+    max-width: 100%;
+    margin-right: 0;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.about-right-column {
+    flex: 1;
+}
+.about-contact-info p, .about-work-study p {
+    padding-bottom: 1rem;
+    font-size: 0.65rem;
+}
+
+.about-contact-info h2, .about-work-study h2 {
+    font-size: 0.60rem;
+    display: inline-block;
+    color: #7a7a7a;
+    padding-bottom: 0rem;
+    padding-top: 1rem;
+}
+.about-bio-summary p{
+    font-size: 0.60rem;
+}
+.about-related-websites h2, .about-sample-press h2, .about-sample-awards h2 {
+    font-size: 0.60em;
+}
+
+.about-related-websites ul, .about-sample-press ul, .about-sample-awards ul {
+    font-size: 0.60em;
+}
+
+.carousel-wrapper {
+    width: 95%;
+    padding: 0 2.5rem;
+}
+
+.book-pair {
+    gap: 1.5rem;
+    padding: 0.5rem;
+}
+
+.book-item {
+    min-width: 200px;
+}
+
+.carousel-btn {
+    width: 2rem;
+    height: 2rem;
+    padding: 0.5rem;
+    display: none;
+}
+}
+
+/* Responsive Adjustments for Mobile Screens */
+@media (max-width: 576px) {
+
+    html, body, .writings-container, .expertise-section, .talks-container  {
+    padding-left: 0.80rem; 
+    padding-right: 0.5rem;
+}
+   .main-container{
+        margin: 0;
+        padding: 0;
+    }
+
+    .main-header
+    {
+        flex-direction: column; /* Stack items vertically */
+        align-items: flex-start; /* Center items horizontally */
+    }
+
+      /* Right-Aligned Navigation */
+.main-nav {
+    position: relative;
+        top: 0;
+        right: 0;
+        width: 100%;
+        margin-top: 0.5rem;
+        display: flex;
+        justify-content: flex-start;
+        transition: top 0.3s ease;
+}
+
+/* Navigation Links */
+.main-nav a {
+    color: #797979;
+    text-decoration: none;
+    font-size: 0.30 rem; /* Default font size for links */
+    transition: color 0.3s, font-weight 0.3s;
+    text-align: center;
+    margin-bottom: 0.5rem;
+}
+
+.main-nav a:hover {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.main-nav a.active {
+    color: #000;
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.social-links {
+        margin-bottom: 0.5rem; /* Reduce spacing further for mobile */
+        margin-top: 1rem;
+        display: flex;
+        gap: 0.5rem;
+    }
+
+    .social-links a img {
+        width: 24px;
+        height: 24px; /* Smaller icons on mobile */
+    }
+
+    .name-section h1 {
+        font-size: 1.6rem; /* Further reduce font size for mobile */
+        margin-top: 0.5rem;
+    }
+
+    .name-section h2 {
+        font-size: 1rem;
+    }
+
+
+/* Expertise Section */
+
+.expertise-section p {
+    font-size: 0.7rem;
+}
+.expertise-section h2 {
+    font-size: 0.90rem;
+    color: white;
+    background-color: grey;
+    padding: 0.5rem 0.5rem;
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+    .project-item h3 {
+        font-size: 0.7rem;
+    }
+
+    .project-item p {
+        font-size: 0.7rem;
+    }
+
+    /* Formatting for writing container */
+.writings-container , .talks-container {
+    font-size: 0.7rem;
+    display: inline-block;
+    color: #7a7a7a;
+}
+
+/* Formatting for the talks page */
+.talk-year h2 {
+    padding-top: 0.5em;
+}
+
+.talks-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5em;
+}
+
+.talk-item {
+    padding-top: 0.5 em;
+}
+
+.talk-title {
+    font-size: 1.0em;
+    font-weight: 500;
+    color: #222;
+}
+
+.talk-event, .talk-description {
+    font-size: 0.85em;
+    color: #666;
+}
+.year-separator {
+    border: none;
+    border-top: 2px solid #ccc; /* Defines the thickness and color of the line */
+    margin: 2em 0; /* Adds space around the line */
+    width: 100%;
+}
+.talks-grid {
+    grid-template-columns: 1fr;
+}
+
+/*Formatting for the About page*/
+
+
+/*Caruosel Formatting for the readinglist page*/
+.carousel-wrapper {
+    width: 100%;
+    padding: 0 1.5rem;
+    overflow-x: hidden;
+}
+
+.book-carousel {
+    width: 100%;
+}
+
+.book-pair {
+    flex-direction: column;
+    gap: 1.5rem;
+    padding: 0.5rem;
+    min-width: 100%;
+}
+
+.book-item {
+    flex: 1;
+    width: 100%;
+    min-width: unset;
+    max-width: 100%;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.book-info {
+    padding: 0.5rem;
+}
+
+.pagination-dots {
+    margin-top: 0.5rem;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+}
+}
+
+/* Small Phone Breakpoint (375px) */
+@media (max-width: 375px) {
+.carousel-wrapper {
+    width: 100%;
+    padding: 0 1rem;
+}
+
+.book-carousel {
+    width: 100%;
+    transform: translateX(0);
+}
+
+.book-pair {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 0.5rem;
+    width: 100%;
+}
+
+.book-item {
+    width: 100%;
+    margin: 0;
+    padding: 0 0.5rem;
+}
+
+.book-info {
+    padding: 0.5rem;
+}
+
+.book-info h2 {
+    font-size: 1rem;
+}
+
+.book-info p {
+    font-size: 0.9rem;
+}
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+.carousel-wrapper {
+    touch-action: pan-x pan-y;
+    -webkit-overflow-scrolling: touch;
+}
+
+.book-carousel {
+    will-change: transform;
+}
+
+.carousel-btn {
+    display: none !important;
+}
+
+.dot {
+    min-width: 24px;
+    min-height: 24px;
+    margin: 0 4px;
+}
+}
+
+/* Hide scrollbar but allow scrolling */
+.carousel-wrapper {
+-ms-overflow-style: none;
+scrollbar-width: none;
+}
+
+.carousel-wrapper::-webkit-scrollbar {
+display: none;
+}

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <!-- Left-aligned section with name, headline, and description -->
+        <div class="name-section">
+            <a href="index.html" class="name-link">
+            <h1>Ari Abramson </h1>
+            </a>
+            <h2>Your Headline or Title</h2>
+            
+            <!-- Social media links with icons, including email -->
+            <div class="social-links">
+                <a href="https://linkedin.com/in/arianaabramson" target="_blank">
+                    <img src="assets/images/linkedin.svg" alt="linkedin Icon">
+                    <span class="tooltip">In: https://linkedin.com/in/arianaabramson</span>
+                </a>
+                <a href="https://x.com/_ariabramson" target="_blank">
+                    <img src= "assets/images/twitter.svg" alt="X Icon">
+                    <span class="tooltip">X: https://X.com/in/_ariabramson</span>
+                </a>
+                <a href="https://youtube.com/_ariabramson" target="_blank">
+                   <img src="assets/images/youtube.svg" alt="Youtube Icon">
+                   <span class="tooltip">YT: https://youtube.com/_ariabramson</span>
+                </a>
+                <a href="https://instagram.com/_ariabramson" target="_blank">
+                   <img src="assets/images/instagram.svg" alt="Instagram Icon" />
+                   <span class="tooltip">IG: https://instagram.com/in/_ariabramson</span>
+                </a>
+                <a href="mailto:ariana.abramson@gmail.com">
+                    <img src="assets/images/email.svg" alt="Email Icon">
+                    <span class="tooltip">Mailto:ariana.abramson@gmail.com</span>
+                </a>
+            </div>
+            </div>
+            
+            <!-- Right-aligned navigation menu -->
+          <nav class="main-nav">
+            <a href="reading-list.html">READING LIST</a>
+            <a href="writings.html">WRITINGS</a>
+            <a href="talks.html">TALKS</a>
+            <a href="about.html" class="active">ABOUT</a>
+        </nav>
+          </header>  
+
+          <div class="about-container">
+            <!-- Left Column -->
+            <div class="about-left-column">
+                <img src="your-image.jpg" alt="Your Photo" class="about-profile-image">
+    
+                <div class="about-contact-info">
+                    <h2>CONTACT</h2>
+                    <p>Email: your.email@example.com</p>
+                    <p>Phone: (123) 456-7890</p>
+                </div>
+    
+                <div class="about-work-study">
+                    <h2>EXPERIENCE</h2>
+                    <p>Current Position: Your Job Title</p>
+                    <p>Institution: Your School/Company</p>
+                </div>
+            </div>
+    
+            <!-- Right Column -->
+            <div class="about-right-column">
+                <div class="about-bio-summary">
+                    <p>This is the section where you can write a short bio about yourself. Describe your background, interests, and other relevant information.</p>
+                </div>
+    
+                <div class="about-related-websites">
+                    <h2>RELATED WEBSITES</h2>
+                    <ul>
+                        <li><a href="https://example.com">Website 1</a></li>
+                        <li><a href="https://example.com">Website 2</a></li>
+                    </ul>
+                </div>
+    
+                <div class="about-sample-press">
+                    <h2>SAMPLE PRESS</h2>
+                    <ul>
+                        <li><a href="https://example.com">Press Article 1</a></li>
+                        <li><a href="https://example.com">Press Article 2</a></li>
+                    </ul>
+                </div>
+    
+                <div class="about-sample-awards">
+                    <h2>SAMPLE AWARDS</h2>
+                    <ul>
+                       <li><a href="https://example.com">Award 1</a></li>
+                       <li><a href="https://example.com">Award 2</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    <script>
+        document.querySelectorAll('.social-links a').forEach(link => {
+            const tooltip = link.querySelector('.tooltip');
+            link.addEventListener('mousemove', (e) => {
+                // Offset the tooltip slightly below the cursor
+                tooltip.style.left = `${e.pageX + 10}px`;
+                tooltip.style.top = `${e.pageY + 10}px`;
+            });
+        });
+        </script>
+        <footer>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+</body>
+</html>

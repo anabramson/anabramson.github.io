@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ari Abramson - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <div class="name-section">
+            <a href="index.html" class="name-link">
+                <h1>Ari Abramson</h1>
+            </a>
+            <h2>Your Headline or Title</h2>
+            
+            <div class="social-links">
+                <a href="https://linkedin.com/in/arianaabramson" target="_blank">
+                    <img src="assets/images/linkedin.svg" alt="LinkedIn Icon">
+                    <span class="tooltip">In: https://linkedin.com/in/arianaabramson</span>
+                </a>
+                <a href="https://x.com/_ariabramson" target="_blank">
+                    <img src="assets/images/twitter.svg" alt="X Icon">
+                    <span class="tooltip">X: https://x.com/_ariabramson</span>
+                </a>
+                <a href="https://youtube.com/_ariabramson" target="_blank">
+                   <img src="assets/images/youtube.svg" alt="YouTube Icon">
+                   <span class="tooltip">YT: https://youtube.com/_ariabramson</span>
+                </a>
+                <a href="https://instagram.com/_ariabramson" target="_blank">
+                   <img src="assets/images/instagram.svg" alt="Instagram Icon" />
+                   <span class="tooltip">IG: https://instagram.com/_ariabramson</span>
+                </a>
+                <a href="mailto:ariana.abramson@gmail.com">
+                    <img src="assets/images/email.svg" alt="Email Icon">
+                    <span class="tooltip">Mailto: ariana.abramson@gmail.com</span>
+                </a>
+            </div>
+        </div>
+        
+        <nav class="main-nav">
+            <a href="reading-list.html" class="active">READING LIST</a>
+            <a href="writings.html">WRITINGS</a>
+            <a href="talks.html">TALKS</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+    </header>
+
+    <main>
+        <div class="reading-list-container">
+            <h1>Current Reading List</h1>
+            <div class="carousel-wrapper">
+                <button class="carousel-btn left-btn">&#9664;</button>
+                <div class="book-carousel">
+                    <!-- Book items go here -->
+                    <div class="book-pair">
+                        <div class="book-item">
+                            <img src="assets/images/book-cover1.jpg" alt="Book Cover 1">
+                            <div class="book-info">
+                                <h2>Book Title 1</h2>
+                                <p><strong>Author:</strong> Author Name</p>
+                                <p>Brief description of the book goes here.</p>
+                                <a href="link-to-book">Read more</a>
+                            </div>
+                        </div>
+                        <div class="book-item">
+                            <img src="assets/images/book-cover2.jpg" alt="Book Cover 2">
+                            <div class="book-info">
+                                <h2>Book Title 2</h2>
+                                <p><strong>Author:</strong> Author Name</p>
+                                <p>Brief description of the book goes here.</p>
+                                <a href="link-to-book">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Additional book-pair divs for other pairs of books -->
+                    <div class="book-pair">
+                        <div class="book-item">
+                            <img src="assets/images/book-cover3.jpg" alt="Book Cover 3">
+                            <div class="book-info">
+                                <h2>Book Title 3</h2>
+                                <p><strong>Author:</strong> Author Name</p>
+                                <p>Brief description of the book goes here.</p>
+                                <a href="link-to-book">Read more</a>
+                            </div>
+                        </div>
+                        <div class="book-item">
+                            <img src="assets/images/book-cover4.jpg" alt="Book Cover 4">
+                            <div class="book-info">
+                                <h2>Book Title 4</h2>
+                                <p><strong>Author:</strong> Author Name</p>
+                                <p>Brief description of the book goes here.</p>
+                                <a href="link-to-book">Read more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-btn right-btn">&#9654;</button>
+            </div>
+
+            <div class="pagination-dots">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <!-- Add dots as needed for each book-pair -->
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>&copy; 2024 Ari Abramson. All rights reserved.</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>

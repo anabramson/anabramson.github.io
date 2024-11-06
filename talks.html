@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    
+    <header class="main-header">
+        <!-- Left-aligned section with name, headline, and description -->
+        <div class="name-section">
+            <a href="index.html" class="name-link">
+            <h1>Ari Abramson </h1>
+            </a>
+            <h2>Your Headline or Title</h2>
+            
+            <!-- Social media links with icons, including email -->
+            <div class="social-links">
+                <a href="https://linkedin.com/in/arianaabramson" target="_blank">
+                    <img src="assets/images/linkedin.svg" alt="linkedin Icon">
+                    <span class="tooltip">In: https://linkedin.com/in/arianaabramson</span>
+                </a>
+                <a href="https://x.com/_ariabramson" target="_blank">
+                    <img src= "assets/images/twitter.svg" alt="X Icon">
+                    <span class="tooltip">X: https://X.com/in/_ariabramson</span>
+                </a>
+                <a href="https://youtube.com/_ariabramson" target="_blank">
+                   <img src="assets/images/youtube.svg" alt="Youtube Icon">
+                   <span class="tooltip">YT: https://youtube.com/_ariabramson</span>
+                </a>
+                <a href="https://instagram.com/_ariabramson" target="_blank">
+                   <img src="assets/images/instagram.svg" alt="Instagram Icon" />
+                   <span class="tooltip">IG: https://instagram.com/in/_ariabramson</span>
+                </a>
+                <a href="mailto:ariana.abramson@gmail.com">
+                    <img src="assets/images/email.svg" alt="Email Icon">
+                    <span class="tooltip">Mailto:ariana.abramson@gmail.com</span>
+                </a>
+            </div>
+            </div>
+            
+            <!-- Right-aligned navigation menu -->
+          <nav class="main-nav">
+            <a href="reading-list.html">READING LIST</a>
+            <a href="writings.html">WRITINGS</a>
+            <a href="talks.html" class="active">TALKS</a>
+            <a href="about.html">ABOUT</a>
+        </nav>
+          </header>  
+
+          <div class="talks-container">
+            <div class = "talk-year">
+                <h2>Year</h2>
+            <div class="talks-grid">
+                <div class="talk-item">
+                    <p class = "talk-title">Title of Talk 1</p>
+                    <p class="talk-event">Conference Name, Location, Year</p>
+                    <p class="talk-description">Brief description of the talk, covering key themes or topics discussed.</p>
+                    <p class="talk-publink">
+                        <a href="medium.com" target="_blank"> Link</a>
+                    </p>
+                </div>
+        
+                <!-- Add more talks here as needed 
+                 
+                -->
+                
+            </div>
+        </div>
+        <hr class="year-separator"> </hr><!-- Separator after 2024 talks -->
+        </div>
+    <script>
+        document.querySelectorAll('.social-links a').forEach(link => {
+            const tooltip = link.querySelector('.tooltip');
+            link.addEventListener('mousemove', (e) => {
+                // Offset the tooltip slightly below the cursor
+                tooltip.style.left = `${e.pageX + 10}px`;
+                tooltip.style.top = `${e.pageY + 10}px`;
+            });
+        });
+        </script>
+        <footer>
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </footer>
+</body>
+</html>

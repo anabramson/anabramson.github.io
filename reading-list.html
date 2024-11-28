@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ari Abramson - Home</title>
+    <title>Ari Abramson - Reading List</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Noto+Sans:ital,wdth,wght@0,62.5..100,100..900;1,62.5..100,100..900&display=swap" rel="stylesheet">
@@ -50,61 +50,74 @@
     </header>
 
     <main>
-        <div class="reading-list-container">
-            <h1>Current Reading List</h1>
-            <div class="carousel-wrapper">
-                <button class="carousel-btn left-btn">&#9664;</button>
-                <div class="book-carousel">
-                    <!-- Book items go here -->
-                    <div class="book-pair">
-                        <div class="book-item">
-                            <img src="assets/images/book-cover1.jpg" alt="Book Cover 1">
-                            <div class="book-info">
-                                <h2>Book Title 1</h2>
-                                <p><strong>Author:</strong> Author Name</p>
-                                <p>Brief description of the book goes here.</p>
-                                <a href="link-to-book">Read more</a>
-                            </div>
-                        </div>
-                        <div class="book-item">
-                            <img src="assets/images/book-cover2.jpg" alt="Book Cover 2">
-                            <div class="book-info">
-                                <h2>Book Title 2</h2>
-                                <p><strong>Author:</strong> Author Name</p>
-                                <p>Brief description of the book goes here.</p>
-                                <a href="link-to-book">Read more</a>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Additional book-pair divs for other pairs of books -->
-                    <div class="book-pair">
-                        <div class="book-item">
-                            <img src="assets/images/book-cover3.jpg" alt="Book Cover 3">
-                            <div class="book-info">
-                                <h2>Book Title 3</h2>
-                                <p><strong>Author:</strong> Author Name</p>
-                                <p>Brief description of the book goes here.</p>
-                                <a href="link-to-book">Read more</a>
-                            </div>
-                        </div>
-                        <div class="book-item">
-                            <img src="assets/images/book-cover4.jpg" alt="Book Cover 4">
-                            <div class="book-info">
-                                <h2>Book Title 4</h2>
-                                <p><strong>Author:</strong> Author Name</p>
-                                <p>Brief description of the book goes here.</p>
-                                <a href="link-to-book">Read more</a>
-                            </div>
-                        </div>
-                    </div>
+        <h2 class="section-title">Currently Reading</h2>
+        
+        <div class="reading-grid">
+            <!-- Example Book 1 -->
+            <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="book-card">
+                <img src="assets/images/book-cover1.jpg" alt="Book cover" class="book-cover">
+                <div class="book-title">The Midnight Library</div>
+                <div class="book-author">by Matt Haig</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 65%"></div>
                 </div>
-                <button class="carousel-btn right-btn">&#9654;</button>
-            </div>
+                <div class="progress-text">65% complete</div>
+            </a>
 
-            <div class="pagination-dots">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <!-- Add dots as needed for each book-pair -->
+            <!-- Example Book 2 -->
+            <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="book-card">
+                <img src="assets/images/book-cover2.jpg" alt="Book cover" class="book-cover">
+                <div class="book-title">Project Hail Mary</div>
+                <div class="book-author">by Andy Weir</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 30%"></div>
+                </div>
+                <div class="progress-text">30% complete</div>
+            </a>
+
+            <!-- Example Book 3 -->
+            <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="book-card">
+                <img src="assets/images/book-cover3.jpg" alt="Book cover" class="book-cover">
+                <div class="book-title">Dune</div>
+                <div class="book-author">by Frank Herbert</div>
+                <div class="progress-container">
+                    <div class="progress-bar" style="width: 85%"></div>
+                </div>
+                <div class="progress-text">85% complete</div>
+            </a>
+        </div>
+
+        <div class="archives-section">
+            <h1 class="section-title">Book Archives</h1>
+            <div class="archives-grid">
+                <!-- Example Archive Items -->
+                <div class="archive-item">
+                    <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="archive-link">
+                        <div class="archive-title">The Three-Body Problem</div>
+                        <div class="archive-author">by Cixin Liu</div>
+                    </a>
+                </div>
+
+                <div class="archive-item">
+                    <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="archive-link">
+                        <div class="archive-title">Atomic Habits</div>
+                        <div class="archive-author">by James Clear</div>
+                    </a>
+                </div>
+
+                <div class="archive-item">
+                    <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="archive-link">
+                        <div class="archive-title">The Psychology of Money</div>
+                        <div class="archive-author">by Morgan Housel</div>
+                    </a>
+                </div>
+
+                <div class="archive-item">
+                    <a href="https://www.amazon.com/dp/XXXXX?tag=your-affiliate-id" target="_blank" rel="noopener noreferrer" class="archive-link">
+                        <div class="archive-title">Foundation</div>
+                        <div class="archive-author">by Isaac Asimov</div>
+                    </a>
+                </div>
             </div>
         </div>
     </main>
